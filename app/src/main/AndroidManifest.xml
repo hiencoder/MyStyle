@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hiennv.mystyle">
 
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2.front"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -27,7 +35,8 @@
             android:name="io.fabric.ApiKey"
             android:value="b42a06f74730f9dfcb1ef3e297103fd8db5f2970" />
 
-        <activity android:name=".ui.splashscreen.SplashActivity"></activity>
+        <activity android:name=".ui.splashscreen.SplashActivity" />
+        <activity android:name=".ui.intro.IntroActivity"></activity>
     </application>
 
 </manifest>
