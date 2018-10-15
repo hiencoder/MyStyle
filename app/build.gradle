@@ -92,4 +92,7 @@ dependencies {
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
         transitive = true;
     }
+
+    compile 'com.sothree.slidinguppanel:library:3.4.0'
+
 }
