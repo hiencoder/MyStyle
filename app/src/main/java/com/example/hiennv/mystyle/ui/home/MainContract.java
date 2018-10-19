@@ -1,7 +1,10 @@
 package com.example.hiennv.mystyle.ui.home;
 
-public interface MainContract {
-    interface MainView{}
+import com.example.hiennv.mystyle.base.BasePresenter;
+import com.example.hiennv.mystyle.base.BaseView;
 
-    interface MainPresenter{}
+public interface MainContract {
+    interface MainView extends BaseView{}
+
+    interface MainPresenter<V extends MainView> extends BasePresenter<V>{}
 }

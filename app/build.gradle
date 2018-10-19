@@ -95,4 +95,13 @@ dependencies {
 
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
 
+    //Add component
+    //Navigation
+    //def nav_version = "1.0.0-alpha06"
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.nav_version"
+    // use -ktx for Kotlin
+    implementation "android.arch.navigation:navigation-ui:$rootProject.nav_version"
+    // use -ktx for Kotlin
+    // optional - Test helpers
+    androidTestImplementation "android.arch.navigation:navigation-testing:$rootProject.nav_version"
 }

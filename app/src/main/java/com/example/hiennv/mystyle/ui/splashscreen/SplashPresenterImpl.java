@@ -1,4 +1,7 @@
 package com.example.hiennv.mystyle.ui.splashscreen;
 
-public class SplashPresenterImpl {
+import com.example.hiennv.mystyle.base.BasePresenterImpl;
+
+public class SplashPresenterImpl<V extends SplashContract.SplashView> extends BasePresenterImpl<V> {
+
 }

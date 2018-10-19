@@ -1,4 +1,4 @@
 package com.example.hiennv.mystyle.base;
 
-public interface BasePresenter {
+public interface BasePresenter<V extends BaseView> {
 }
