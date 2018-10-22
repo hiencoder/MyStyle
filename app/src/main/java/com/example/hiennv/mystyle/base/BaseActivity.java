@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 
 import com.example.hiennv.mystyle.network.ApiEvent;
-import com.example.hiennv.mystyle.network.ApiEventType;
+
 import com.example.hiennv.mystyle.ui.customview.DialogLoading;
 import com.example.hiennv.mystyle.ui.dialog.DialogErrorApi;
 import com.example.hiennv.mystyle.ui.dialog.DialogErrorConnection;
@@ -20,7 +20,6 @@ import com.example.hiennv.mystyle.ui.dialog.DialogTimeOutApi;
 import com.example.hiennv.mystyle.utils.EventBusHelper;
 import com.gabrielsamojlo.keyboarddismisser.KeyboardDismisser;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
