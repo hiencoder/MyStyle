@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <TextView
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Skip"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="309dp"
+        app:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btn_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_line"
+        app:layout_constraintTop_toTopOf="@+id/btn_line"
+        app:layout_editor_absoluteY="383dp" />
+
+    <Button
+        android:id="@+id/btn_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line"
+        app:layout_constraintBottom_toTopOf="@+id/tv_already_signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_editor_absoluteX="147dp"
+        app:layout_editor_absoluteY="381dp" />
+
+    <Button
+        android:id="@+id/btn_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        app:layout_constraintLeft_toRightOf="@+id/btn_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_line"
+        app:layout_editor_absoluteX="285dp"
+        app:layout_editor_absoluteY="383dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyStyle"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_editor_absoluteX="162dp"
+        app:layout_editor_absoluteY="168dp" />
+
+    <TextView
+        android:id="@+id/tv_already_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="I've already signed up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="162dp" />
+</android.support.constraint.ConstraintLayout>

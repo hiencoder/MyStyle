@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyStyle</string>
+
+    <!--Splash-->
+    <string name="txt_fb_cancel">Facebook cancel</string>
+    <string name="txt_line_cancel">Line cancel</string>
+    <string name="txt_phone_cancel">Phone cancel</string>
+    <string name="txt_already_signed_up"></string>
 </resources>
