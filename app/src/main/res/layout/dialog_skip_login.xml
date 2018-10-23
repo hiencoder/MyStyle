@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_skip_login"
+            fontPath="fonts/Roboto-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_skip_login" />
+
+        <TextView
+            android:id="@+id/tv_message_skip"
+            fontPath="fonts/Roboto-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_message_skip_login" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_skip_login"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Cancel"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_skip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Skip"
+                android:textAllCaps="false" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

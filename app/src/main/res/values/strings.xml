@@ -6,4 +6,7 @@
     <string name="txt_line_cancel">Line cancel</string>
     <string name="txt_phone_cancel">Phone cancel</string>
     <string name="txt_already_signed_up"></string>
+    <string name="txt_skip_login">Skip Login</string>
+    <string name="txt_message_skip_login">Are you sure you want to skip login?</string>
+    <string name="txt_message_dialog_all_permission">All Permission</string>
 </resources>

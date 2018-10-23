@@ -6,6 +6,7 @@ import android.content.Context;
 import com.crashlytics.android.Crashlytics;
 import com.example.hiennv.mystyle.R;
 import com.example.hiennv.mystyle.di.component.AppComponent;
+//import com.example.hiennv.mystyle.di.component.DaggerAppComponent;
 import com.example.hiennv.mystyle.di.component.DaggerAppComponent;
 import com.example.hiennv.mystyle.di.module.AppModule;
 import com.example.hiennv.mystyle.utils.AppLogger;
@@ -15,18 +16,18 @@ import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MyApplication extends Application{
-    private AppComponent appComponent;
+    //private AppComponent appComponent;
     @Override
     public void onCreate() {
         super.onCreate();
         Fabric.with(this, new Crashlytics());
-        /*CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
         .setDefaultFontPath("fonts/Roboto-Bold.ttf")
         .setFontAttrId(R.attr.fontPath)
-        .build());*/
-        appComponent = DaggerAppComponent.builder()
+        .build());
+        /*appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
-                .build();
+                .build();*/
         //Logger
         AppLogger.init(this);
 
@@ -38,11 +39,11 @@ public class MyApplication extends Application{
 
     }
 
-    public AppComponent getAppComponent() {
+    /*public AppComponent getAppComponent() {
         return appComponent;
     }
 
     public static MyApplication getApplication(Context context){
         return (MyApplication)context.getApplicationContext();
-    }
+    }*/
 }

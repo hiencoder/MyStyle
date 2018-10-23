@@ -5,12 +5,6 @@ import com.example.hiennv.mystyle.base.BaseView;
 
 public interface RegisterContract {
     interface RegisterView extends BaseView{
-        void handleSkip();
-        void handleFacebook();
-        void handleLine();
-        void handlePhoneNumber();
-        void handleAlreadySignedUp();
-
         void handleAcceptPermission();
         void handleDenyPermission();
     }

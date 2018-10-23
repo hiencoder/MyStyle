@@ -8,16 +8,18 @@ import android.widget.TextView;
 import com.example.hiennv.mystyle.R;
 import com.example.hiennv.mystyle.app.MyApplication;
 import com.example.hiennv.mystyle.base.BaseActivity;
-import com.example.hiennv.mystyle.di.component.DaggerRegisterComponent;
+//import com.example.hiennv.mystyle.di.component.DaggerRegisterComponent;
 import com.example.hiennv.mystyle.di.component.RegisterComponent;
 import com.example.hiennv.mystyle.di.module.RegisterMvpModule;
+
+import java.io.Serializable;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class RegisterActivity extends BaseActivity implements RegisterContract.RegisterView {
+public class RegisterActivity extends BaseActivity implements RegisterContract.RegisterView, Serializable{
     @BindView(R.id.btn_skip)
     TextView btnSkip;
     @BindView(R.id.btn_facebook)
@@ -28,9 +30,10 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     Button btnPhoneNumber;
 
     RegisterComponent registerComponent;
-    @Inject
-    RegisterPresenterImpl<RegisterContract.RegisterView> registerPresenter;
+    /*@Inject
+    RegisterPresenterImpl<RegisterContract.RegisterView> registerPresenter;*/
 
+    RegisterPresenterImpl<RegisterContract.RegisterView> registerPresenter;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_register;
@@ -44,12 +47,12 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        registerComponent = DaggerRegisterComponent.builder()
+        /*registerComponent = DaggerRegisterComponent.builder()
                 .appComponent(MyApplication.getApplication(this).getAppComponent()) //Dependencies AppComponent
                 .registerMvpModule(new RegisterMvpModule(this))
                 .build();
-        registerComponent.inject(this);
-
+        registerComponent.inject(this);*/
+        registerPresenter = new RegisterPresenterImpl<>(this,this);
     }
 
     @OnClick({R.id.btn_skip, R.id.btn_facebook, R.id.btn_line, R.id.btn_phone_number, R.id.tv_already_signup})
@@ -71,31 +74,6 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
                 registerPresenter.handleAlreadySignedUp();
                 break;
         }
-    }
-
-    @Override
-    public void handleSkip() {
-
-    }
-
-    @Override
-    public void handleFacebook() {
-
-    }
-
-    @Override
-    public void handleLine() {
-
-    }
-
-    @Override
-    public void handlePhoneNumber() {
-
-    }
-
-    @Override
-    public void handleAlreadySignedUp() {
-
     }
 
     @Override
